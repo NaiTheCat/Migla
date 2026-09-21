@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bwdws5owbmf0g"]
+
+[ext_resource type="PackedScene" uid="uid://8ru2ynek60jn" path="res://world.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://c0p5nv3lekfj8" path="res://player.tscn" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bdeqq14yhcqjp" path="res://backpack.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://m1douprcr7sq" path="res://hud.tscn" id="4_1bvp3"]
+
+[node name="Main" type="Node2D" unique_id=234053068]
+
+[node name="World" parent="." unique_id=1935889020 node_paths=PackedStringArray("_player") instance=ExtResource("1_h2yge")]
+_player = NodePath("../Player")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="World" unique_id=2028404697]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="World/ParallaxBackground" unique_id=1199099053]
+motion_scale = Vector2(0.5, 0.5)
+
+[node name="Sprite2D" type="Sprite2D" parent="World/ParallaxBackground/ParallaxLayer" unique_id=2032630201]
+
+[node name="Player" parent="." unique_id=613645823 instance=ExtResource("1_ig7tw")]
+position = Vector2(305, 313)
+
+[node name="Backpack" parent="." unique_id=1762213147 node_paths=PackedStringArray("_player") instance=ExtResource("3_h2yge")]
+_player = NodePath("../Player")
+
+[node name="Hud" parent="." unique_id=618036186 node_paths=PackedStringArray("_player") instance=ExtResource("4_1bvp3")]
+_player = NodePath("../Player")

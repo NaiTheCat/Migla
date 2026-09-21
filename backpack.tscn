@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bdeqq14yhcqjp"]
+
+[ext_resource type="Script" uid="uid://bv13acwlhj51" path="res://backpack.gd" id="1_l1ewb"]
+
+[node name="Backpack" type="CanvasLayer" unique_id=1762213147]
+script = ExtResource("1_l1ewb")
+
+[node name="Panel" type="Panel" parent="." unique_id=1160475695]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="Panel" unique_id=74583033]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

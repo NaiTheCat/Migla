@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://m1douprcr7sq"]
+
+[ext_resource type="Script" uid="uid://bfsrw5btegu7t" path="res://hud.gd" id="1_37p78"]
+[ext_resource type="FontFile" uid="uid://rfv8r2geky6o" path="res://Loading Screen Aesthetics/Pixeled.ttf" id="2_64ctp"]
+
+[node name="Hud" type="CanvasLayer" unique_id=618036186]
+script = ExtResource("1_37p78")
+
+[node name="DistanceLabel" type="Label" parent="." unique_id=1532411385]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -45.5
+offset_right = 40.0
+offset_bottom = 45.5
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_64ctp")
+theme_override_font_sizes/font_size = 24
+vertical_alignment = 1
+
+[node name="EatHint" type="Label" parent="." unique_id=1155184150]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -23.0
+offset_right = 52.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_64ctp")
+text = "E to eat berry"

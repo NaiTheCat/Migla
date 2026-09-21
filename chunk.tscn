@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cvnav8tgcpukb"]
+
+[ext_resource type="Script" uid="uid://dudg346xmqk7e" path="res://chunk.gd" id="1_kdh3y"]
+
+[node name="Chunk" type="StaticBody2D" unique_id=179619697]
+script = ExtResource("1_kdh3y")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=1648060147]

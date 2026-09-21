@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://c0p5nv3lekfj8"]
+
+[ext_resource type="Script" uid="uid://cx4ce8u7ha5iu" path="res://player.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://dw4s34e1rhpw" path="res://player/fox_walk_1.png" id="2_sweqy"]
+[ext_resource type="Texture2D" uid="uid://bdraamst8b6c5" path="res://player/fox_walk_2.png" id="3_2hs0m"]
+[ext_resource type="Texture2D" uid="uid://cqqwmyrxaoek7" path="res://player/fox_walk_3.png" id="4_1jxqw"]
+[ext_resource type="Texture2D" uid="uid://cdn30aj233y1w" path="res://player/fox_walk_4.png" id="5_dw050"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4flbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_2hs0m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_sweqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dw050")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1jxqw")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[node name="Player" type="CharacterBody2D" unique_id=613645823]
+script = ExtResource("1_onrkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=878830605]
+shape = SubResource("RectangleShape2D_onrkg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=87261600]
+zoom = Vector2(1.5, 1.5)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=821293996]
+sprite_frames = SubResource("SpriteFrames_4flbx")
+animation = &"walk"

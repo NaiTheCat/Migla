@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://8ru2ynek60jn"]
+
+[ext_resource type="Script" uid="uid://derei2bd3obe4" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="AudioStream" uid="uid://ok451vt81l82" path="res://rain_loop.wav" id="2_tlwt5"]
+[ext_resource type="Script" uid="uid://ci4ou8scdr7el" path="res://audio_stream_player.gd" id="3_aqk2v"]
+
+[node name="World" type="Node2D" unique_id=1935889020]
+script = ExtResource("1_f3sb7")
+
+[node name="RainPlayer" type="AudioStreamPlayer" parent="." unique_id=631270119]
+stream = ExtResource("2_tlwt5")
+volume_db = 5.0
+script = ExtResource("3_aqk2v")
